@@ -1,0 +1,99 @@
+/*Suppression des mages par defaut*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/******************/
+
+.cadre_img{
+    height: 600px;
+    width: 440px; 
+    padding-bottom: 25px;
+}
+.img img{
+ height: 26em;
+ width: 27em;
+ cursor: pointer;
+ max-width: 100%;
+ transition: transform 0.3s;
+}
+.filter{
+    height: 600px;
+    width: 440px; 
+    padding: 15px;
+ background-color: blue;
+} 
+.img img:hover{
+    transform: scale(1.1);
+}
+.text_nom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-family: roboto;
+}
+.text{
+    font-family: roboto;
+}
+.text,.note,.nom{
+    margin-left: 17px;
+    font-size: 0.8em;
+}
+.prix,.panier{
+    margin-right: 25px;
+}
+.note_panier{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.panier img{
+    height: 2em;
+}
+.panier span{
+  position: relative;
+  bottom: 15px;
+  right:24px ;
+  font-weight: bold;
+}
+/********************************/
+/*organisation des images : display grid*/
+main{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 10px;
+    margin:auto;
+    position: relative;
+    top: 110px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px){
+  main{
+    position: relative;
+    top: 500px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;   
+}
+.img img{
+ height: 20em;
+
+}
+
+#fourth,#five,#six,#seven{
+    display: none;
+}
+}
