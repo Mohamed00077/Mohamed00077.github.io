@@ -1,3 +1,5 @@
+
+
 *{
     padding: 0;
     margin: 0;
@@ -13,6 +15,7 @@ body{
 
 
 header{
+    position: fixed;
     width: 100%;
     top: 0;
     right: 0;
@@ -20,7 +23,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    background: #fff;
     padding-left: 5%;
     padding-right: 5%;
     transition: all .5s ease;
@@ -99,7 +102,8 @@ header .navbar_right #menu-icon{
     }
 }
 
-@media (max-width: 600px){
+
+@media (max-width: 700px){
     header .navbar_right #menu-icon{
         display: block;
     }
@@ -118,6 +122,10 @@ header .navbar_right #menu-icon{
         transition: all .5s ease;
         color: #fff;
 
+    }
+
+    header .navbar_left img{
+        max-width: 3rem;
     }
 
     header .navbar_right a {
@@ -150,15 +158,12 @@ header .navbar_right #menu-icon{
     header .navbar_left a{
         color: #f1f1f1;
     }
-
-    /* header .navbar_left {
-        
-    } */
 }
 
 .after_navbar{
     position: relative;
     top: 70px;
+    width: 90%;
     width:90%;
     min-height: 10vh;
     margin: auto;
@@ -166,6 +171,12 @@ header .navbar_right #menu-icon{
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    /*background-color: aquamarine;*/
+}
+
+.after_navbar img{
+    max-width: 3rem;
+
     /*background-color: rgb(22, 124, 155);*/
 }
 
@@ -201,6 +212,11 @@ input{
     flex-direction: column;
     min-width: 0;
     color: #333;
+    width: 92%;
+}
+
+input {
+    width: 95%;
 }
 
 input {
@@ -210,6 +226,7 @@ input {
     border-bottom: solid .2rem #333;
     font-size: 1.3rem;
     color: #333;
+    margin-left: 20px;
     margin-left: 4%;
     padding-bottom: 10px;
     z-index: 10;
@@ -225,6 +242,88 @@ input {
     gap: 8px;
     color: #333;
     z-index: 4;
+}
+
+@media(max-width: 1000px){
+
+    .after_navbar{
+        position: relative;
+        top: 90px;
+        width:90%;
+        min-height: 10vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        /*background-color: rgb(22, 124, 155);*/
+    }
+
+    .after_navbar img{
+        max-width: 2rem;
+        margin-left: 1px;
+    }
+
+    input {
+        width: 90%;
+        height: 30px;
+        border: none;
+        border-bottom: solid .2rem #333;
+        font-size: 1.1rem;
+        color: #333;
+        margin-left: 15px;
+        padding-bottom: 10px;
+        z-index: 10;
+        background: transparent;
+    }
+
+     .input{
+        display: flex;
+        align-items: center;
+        margin-bottom: -20px;
+        margin-right: 48px;
+        justify-content: flex-end;
+        gap: 8px;
+        color: #333;
+        z-index: 4;
+        font-size: .8rem;
+    }
+}
+@media(max-width: 700px){
+
+    .after_navbar{
+        position: relative;
+        top: 90px;
+        width:90%;
+        min-height: 10vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        /*background-color: rgb(22, 124, 155);*/
+    }
+
+    .after_navbar img{
+        max-width: 1.5rem;
+        margin-left: 10px;
+    }
+
+    .input{
+        display: none;
+    }
+    input {
+        width: 98%;
+        height: 30px;
+        border: none;
+        border-bottom: solid .2rem #333;
+        font-size: 1rem;
+        color: #333;
+        margin-right: 250px;
+        padding-bottom: 10px;
+        z-index: 10;
+        background: transparent;
+    }
 
 }
 
@@ -245,6 +344,9 @@ input {
     cursor: pointer;
     padding: 1rem .5rem;
     border-radius: 4px;
+    width: 100%;
+    margin-bottom: 45px;
+    font-size: 1.3rem;
     margin-bottom: 30px;
     width: 100%;
     font-size: 1rem;
@@ -253,7 +355,7 @@ input {
 }
 
 .dropdown-select i{
-    font-size: 20px;
+    font-size: 40px;
     transition: all .3s ease;
 }
 
@@ -284,7 +386,6 @@ input {
 .dropdown.active .options{
     display: block;
     transition: all .2s ease;
-
 }
 
 .options .option{
@@ -298,3 +399,105 @@ input {
 .option .option-text{
     font-size: 12px;
 }
+
+@media(max-width:1000px){
+   .dropdown{
+    width: 20%;
+}
+
+.dropdown:hover .dropdown-list{
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.dropdown-select{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: .5rem .5rem;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 35px;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 0px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-select i{
+    font-size: 40px;
+    transition: all .3s ease;
+}
+
+.dropdown.active .dropdown-select i{
+    transform: rotate(-180deg);
+}
+
+.dropdown .options{
+    border-radius: 4px;
+    background-color: #333;
+    position: relative;
+    color:#fff;
+    padding: 5px;
+    margin-top: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 0px 0 rgba(0, 0, 0, 0.1);
+    transition: all .2s ease;
+    display: none;
+    width: 100%;
+}
+
+.dropdown .options:hover{
+    background-color: #fff;
+    color:#333;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.dropdown.active .options{
+    display: block;
+    transition: all .2s ease;
+}
+
+.options .option{
+    display: flex;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.option .option-text{
+    font-size: 12px;
+}
+
+}
+@media(max-width: 700px){
+    .dropdown{
+        position: absolute;
+        top: 80px;
+        left: 10px;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .dropdown-select{
+    cursor: pointer;
+    height: 30px;
+    padding: 25px 5px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 0px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-select i{
+    font-size: 50px;
+    transition: all .3s ease;
+    }
+
+    .dropdown.active .dropdown-select i{
+    transform: rotate(-180deg);
+    }
+} 
