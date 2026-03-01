@@ -1,0 +1,230 @@
+.div_fl_input{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgb(201, 198, 198);
+   
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+    
+}
+
+.filter{
+    height: 500px;
+    width: 440px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    bottom: 50px;
+
+}
+
+.fl_title{
+    color: rgb(201, 198, 198);
+    font-size: 0.85rem;
+    margin-bottom: 1.3rem;
+}
+
+.fl_input{
+    border: transparent;
+    font-size: 1.1rem;
+    color: gray;
+    font-weight: 500;
+    outline: none;
+    width: 100%;
+    padding: 0.3rem 0.5rem;
+}
+.arrow{
+    color: black;
+    font-size: 1.2rem;
+}
+
+.sliderTitle{
+    color: gray;
+    font-weight: 500;
+     padding-bottom: 0.75rem;
+      font-size: 1.1rem;
+    
+
+}
+
+.slidercontainer {
+    width: 100%;
+    position: relative;
+    right: 20px;
+    bottom: 34.5px;
+    opacity: 0.5;
+    width:100.6%;
+}
+
+.slider{
+  height: 1px;
+  position: relative;
+  background: rgb(201, 198, 198);
+  
+}
+
+.slider .progress {
+    height: 100%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
+    border-radius: 1px;
+    background: gray; 
+}
+
+.slidercontainer input{
+    position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;   
+    border: none;          
+    background: #b4b4b4;
+    pointer-events: auto;
+    cursor: pointer;
+    appearance: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;   
+    border: none;
+    background: #b4b4b4;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+.divprice{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    bottom: 35px;
+}
+
+.divprice p {
+    color: gray;
+    font-size: 0.75rem;
+}
+
+
+
+
+
+/*Style pagination*/
+
+.div_pagin {
+    margin-top: 15rem;
+}
+
+.ul_pagin {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.li_pagin {
+    padding: 0 1.5%;
+}
+
+.link_pagin,
+.icndroit_pagin {
+    text-decoration: none;
+    color: black;
+   
+    padding: 10px 15px;
+}
+
+
+
+.link_pagin:hover,
+.active {
+
+    background-color: black;
+    color: white;
+
+
+}
+
+
+@media only screen and (max-width:768px) {
+
+    .link8,
+    .link9,
+    .link10
+     {
+        display: none;
+    }
+
+  
+
+
+}
+
+@media only screen and (max-width:576px) {
+
+    .link5,
+    .link6,
+    .link7,
+    .link8,
+    .link9,
+    .link10 ,
+    .filter{
+        display: none;
+    }
+}
+
+/*Select*/
+
+.select {
+  position: relative;
+  cursor: pointer;
+}
+
+.select_list {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid rgb(201, 198, 198);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.select_list li {
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.select_list li:hover {
+  background: #f2f2f2;
+}
