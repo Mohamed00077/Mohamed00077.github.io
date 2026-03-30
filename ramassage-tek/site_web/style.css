@@ -1,9 +1,3 @@
-
-
-
-
-
-
 /*Suppression des mages par defaut*/
 *{
     margin: 0px;
@@ -23,10 +17,13 @@
  max-width: 100%;
  transition: transform 0.3s;
  padding-bottom: 25px;
- padding-left: 25px;
  
 }
-
+.filter{
+    height: 600px;
+    width: 440px; 
+    padding: 15px;
+} 
 .img img:hover{
     transform: scale(1.1);
 }
@@ -65,15 +62,12 @@
   right:24px ;
   font-weight: bold;
 }
-.filter_responsive{
-    display: none;
-}
 /********************************/
 /*organisation des images : display grid*/
 main{
-    /* display: grid;
+    display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: 2fr 2fr; */
+    grid-template-rows: 2fr 2fr;
     gap: 10px;
     margin:auto;
     position: relative;
@@ -95,35 +89,9 @@ main{
    gap: 5px;   
 }
 
- .filter_responsive{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        cursor: pointer;
-        height: 30px;
-        padding: 25px 5px;
-        border-radius: 4px;
-        margin-bottom: 30px;
-        font-size: 1rem;
-        background-color: #fff;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 0px 0 rgba(0, 0, 0, 0.1);
-        position: relative;
-        bottom: 40px;
-        left: 10px;
-    }
-    .filter_responsive i{
-        font-weight: bold;
-        font-size: 1.90rem;
-        position: relative;
-        right: 10px;
-        bottom: 15px;
-    }
-
 .img img{
 max-width: 93%;
 margin-left: 17px;
-padding-left: 0px;
 }
 .filter{
     max-width: 89%;

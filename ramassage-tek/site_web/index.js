@@ -92,29 +92,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const priceMin = document.getElementById("priceMin");
     const priceMax = document.getElementById("priceMax");
 
-  function updateRange() {
-    let min = parseInt(rangeMin.value);
-    let max = parseInt(rangeMax.value);
-    let maxRange = parseInt(rangeMax.max);
+    function updateRange() {
 
-   
-    if (min >= max) {
-        rangeMin.value = max - 1;
-        min = max - 1;
+        let min = parseInt(rangeMin.value);
+        let max = parseInt(rangeMax.value);
+        let maxRange = parseInt(rangeMax.max);
+
+
+        if (min > max) {
+            rangeMin.value = max;
+            min = max;
+        }
+
+        if (max < min) {
+            rangeMax.value = min;
+            max = min;
+        }
+
+
+        progress.style.left = (min / maxRange) * 100 + "%";
+        progress.style.right = 100 - (max / maxRange) * 100 + "%";
+
+
+        priceMin.textContent = min + "$";
+        priceMax.textContent = max + "$";
     }
-
-    if (max <= min) {
-        rangeMax.value = min + 1;
-        max = min + 1;
-    }
-
-    progress.style.left = (min / maxRange) * 100 + "%";
-    progress.style.right = 100 - (max / maxRange) * 100 + "%";
-
-  
-    priceMin.textContent = "$" + min.toLocaleString();
-    priceMax.textContent = max >= maxRange ? "$" + maxRange.toLocaleString() + "+" : "$" + max.toLocaleString();
-}
 
     rangeMin.addEventListener("input", updateRange);
     rangeMax.addEventListener("input", updateRange);
